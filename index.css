@@ -1,0 +1,253 @@
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: hsl(180, 52%, 96%);
+    scroll-behavior: smooth;
+    font-family: 'League Spartan', sans-serif;
+}
+
+.header {
+    height: 180px;
+    background-color: hsl(180, 29%, 50%);
+    background-image: url("./images/bg-header-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.filter-pick{
+    margin: auto;
+    max-width: min(900px,90%);
+    background-color: white;
+    border-radius:8px;
+    box-shadow: rgba(184, 193, 202, 0.2) 0px 8px 24px;
+    display: none;
+    align-items: center;
+    gap: 10px;
+    margin-top:-20px;
+    justify-content: space-between;
+    padding: 10px;
+    position: relative;
+    z-index: 2;
+}
+.filters-container {
+    display:flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    flex: 2;
+}
+.show {
+    display:flex
+}
+
+.clear{
+    font-weight:700;
+    font-size: 16px;
+    color: hsla(180, 8%, 52%, 0.784);
+    cursor:pointer;
+}
+.filter {
+    background-color: hsla(180, 23%, 59%, 0.107);
+    border-radius: 2px;
+    cursor:pointer;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    height:25px;
+    width: max-content;
+}
+.filter-text{
+    color: hsl(180, 29%, 50%);
+    font-size: 16px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-inline: 5px;
+    font-weight: 700;
+}
+.close{
+    height: 100%;
+    padding-inline: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(180, 29%, 50%);
+}
+.jobs {
+    gap: 20px;
+    width: 90%;
+    display: flex;
+    margin:0 auto;
+    padding-block: 2.5rem;
+    flex-direction: column;
+    max-width: min(900px, 90%);
+}
+
+.job {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: hsl(0, 0%, 100%);
+    padding: 20px 35px;
+    border-radius: 5px;
+    gap: 15px;
+    box-shadow: rgba(184, 193, 202, 0.2) 0px 8px 24px;
+}
+
+.flag {
+    border-left: 5px;
+    border-left-color: hsl(180, 29%, 50%);
+    border-left-style: solid;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    width: 80px;
+}
+
+.top {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.company {
+    color: hsl(180, 29%, 50%);
+    font-weight: 700;
+}
+
+.featured,.recent {
+    padding: 6px;
+    border-radius: 30px;
+    font-weight: 700;
+    color: white;
+    font-size: 11px;
+    text-transform: uppercase;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.featured {
+    background-color: hsl(180,14%,20%);
+}
+
+.recent {
+    background-color: hsl(180, 29%, 50%);
+}
+
+.position {
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+.position:hover{
+    color:hsl(180, 29%, 50%);
+}
+.details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.bottom {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.postedAt,
+.contract,
+.location {
+    color: hsl(180, 8%, 52%);
+    font-size: 15px;
+    font-weight: 700;
+}
+.dot{
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: hsl(180, 8%, 52%);
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+    padding-inline:10px;
+    margin-left: auto;
+}
+
+.skill {
+    background-color: hsla(180, 23%, 59%, 0.107);
+    color: hsl(180, 29%, 50%);
+    font-size: 16px;
+    padding: 8PX;
+    border-radius: 2px;
+    font-weight: 700;
+    cursor:pointer
+}
+
+.skill:hover {
+    background-color: hsla(180, 29%, 50%);
+    color:white;
+}
+
+@media screen and (max-width:768px) {
+    .header {
+        height: 100px;
+        background-image: url("./images/bg-header-mobile.svg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .logo{
+        position: absolute;
+        width: 50px;
+        top:0;
+        transform: translateY(-50%) translateX(25%);
+    }
+    .jobs{
+        gap: 40px;
+        padding-block:50px ;
+    }
+    .job{
+        position: relative;
+        padding: 30px 20px;
+    }
+    .skills{
+        width: 100%;
+        border-top:0.5px solid rgba(128, 128, 128, 0.525);
+        padding-top: 20px;
+    }
+    .filter-pick:has(.show) .jobs {
+        padding-block:50px ;
+    }
+}
+
+
+.dragging {
+    opacity: 1;
+    color:hsl(180, 29%, 50%);
+
+  }
